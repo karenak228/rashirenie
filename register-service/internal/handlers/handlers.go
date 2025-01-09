@@ -1,11 +1,11 @@
-package handlers
+package handlers //ручки
 
 import "github.com/gofiber/fiber/v2"
 
 type Handlers struct {
 }
 
-func New() *Handlers { //
+func New() *Handlers {
 	return &Handlers{}
 }
 

@@ -23,8 +23,9 @@ func New() *App {
 }
 
 func (a *App) routers() {
-	a.app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Привет, мир!")
+	a.app.Get("/registration", func(c *fiber.Ctx) error {
+		return a.handlers.RegistrationHandler(c)
+
 	})
 }
 
