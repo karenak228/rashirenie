@@ -5,3 +5,8 @@ type Client struct {
 	FullName string `json:"full_name"`
 	Password string `json:"password"`
 }
+
+type Login struct {
+	Email    string `json:"email"`
+	Password string `json:"password"`
+}
