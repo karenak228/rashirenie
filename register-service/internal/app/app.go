@@ -23,10 +23,7 @@ func New() *App {
 }
 
 func (a *App) routers() {
-	a.app.Get("/registration", func(c *fiber.Ctx) error {
-		return a.handlers.RegistrationHandler(c)
-
-	})
+	a.app.Post("/registration", a.handlers.RegistrationHandler)
 }
 
 func (a *App) Run() {
