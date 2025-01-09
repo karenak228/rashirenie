@@ -17,13 +17,14 @@ func New() *App {
 	a := &App{}
 	a.app = fiber.New()
 	a.services = services.New()
-	a.handlers = handlers.New()
+	a.handlers = handlers.New(a.services)
 	a.routers()
 	return a
 }
 
 func (a *App) routers() {
 	a.app.Post("/registration", a.handlers.RegistrationHandler)
+	a.app.Post("/login", a.handlers.LoginHandler)
 }
 
 func (a *App) Run() {
