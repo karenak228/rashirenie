@@ -13,7 +13,7 @@ import (
 type Repositori struct {
 }
 
-func New(*sql.DB) *Repositori { // принимает *sql.DB, выводит *Repositori
+func New(db *sql.DB) *Repositori { // принимает *sql.DB, выводит *Repositori
 	return &Repositori{}
 }
 

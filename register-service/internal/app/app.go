@@ -22,8 +22,8 @@ func New() *App {
 	db := repository.CreateConnection() //подключенная бд
 	a.repository = repository.New(db)
 	a.app = fiber.New()
-	a.services = services.New(a.repository) //да я хз короче
-	a.handlers = handlers.New(a.services)   //вызвали функцию new из эндпоинт(хендлера)
+	a.services = services.New(a.repository)
+	a.handlers = handlers.New(a.services) //вызвали функцию new из эндпоинт(хендлера)
 	a.routers()
 	return a
 }

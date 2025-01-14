@@ -10,8 +10,8 @@ type Services struct {
 	repository *repository.Repositori
 }
 
-func New() *Services {
-	return &Services{}
+func New(r *repository.Repositori) *Services {
+	return &Services{repository: r}
 }
 
 func (s *Services) Login(r requests.Login) error {
