@@ -12,6 +12,7 @@ var validate = validator.New()
 
 type Services interface {
 	Login(requests.Login) error
+	Registration(requests.Client) error
 }
 
 type Handlers struct {
